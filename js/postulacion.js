@@ -40,6 +40,11 @@ function guardarPostulacion(event) {
     alert("Por favor completa todos los campos obligatorios.");
     return;
   }
+  // Validar que el nombre no contenga números
+if (/\d/.test(nombre)) {
+    alert("El nombre no puede contener números.");
+    return;
+}
 
   // Buscar datos de la mascota
   let mascota = mascotas.find(m => m.id == idMascota);

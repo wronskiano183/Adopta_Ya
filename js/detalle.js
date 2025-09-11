@@ -2,7 +2,7 @@
 
         document.addEventListener('DOMContentLoaded', function() {
 
-            // Obtener el ID de la mascota de la URL
+            // Obtenemos el ID de la mascota de la URL
             const urlParams = new URLSearchParams(window.location.search);
             const petId = urlParams.get('id');
             
@@ -32,7 +32,7 @@
                     // Actualizar descripción
                 document.querySelector('.mb-4carga').textContent = pet.descripcion;
 
-                    // OPCIÓN 2: Actualizar imagen estática (RECOMENDADO)
+                    // Actualizar imagen estática 
                     const staticImage = document.getElementById('staticPetImage');
                     if (pet.foto) {
                         console.log('Cargando foto estática:', pet.foto);

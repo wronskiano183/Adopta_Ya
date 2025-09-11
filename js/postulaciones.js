@@ -8,7 +8,7 @@ const mascotas = [
   
 ];
 
-// 🔹 Mostrar postulaciones en la tabla
+// Mostrar postulaciones en la tabla
 function mostrarPostulaciones() {
   let postulaciones = JSON.parse(localStorage.getItem("postulaciones")) || [];
   let tabla = document.getElementById("tabla-postulaciones");
@@ -38,7 +38,7 @@ function mostrarPostulaciones() {
   actualizarContador();
 }
 
-// 🔹 Cambiar estado de una postulación
+//Cambiamos el estado de una postulación
 function cambiarEstado(id, nuevoEstado) {
   let postulaciones = JSON.parse(localStorage.getItem("postulaciones")) || [];
   let p = postulaciones.find(p => p.id === id);
@@ -49,7 +49,7 @@ function cambiarEstado(id, nuevoEstado) {
   }
 }
 
-// 🔹 Contador de adopciones aprobadas por especie
+//Contador para ver las adopciones aprobadas por especie
 function actualizarContador() {
   let postulaciones = JSON.parse(localStorage.getItem("postulaciones")) || [];
   let contador = {};
@@ -69,7 +69,7 @@ function actualizarContador() {
   }
 }
 
-// 🔹 Exportar postulaciones a TXT
+//Exportar postulaciones a TXT
 function exportarTXT() {
   let postulaciones = JSON.parse(localStorage.getItem("postulaciones")) || [];
   let contenido = "ID | Adoptante | Email | Mascota | Estado\n";
@@ -85,5 +85,5 @@ function exportarTXT() {
   enlace.click();
 }
 
-// 🔹 Ejecutar al cargar la página
+//Ejecutar al cargar la página
 document.addEventListener("DOMContentLoaded", mostrarPostulaciones);
