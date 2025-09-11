@@ -1,4 +1,4 @@
-        document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function() {
             // Obtener el ID de la mascota de la URL
             const urlParams = new URLSearchParams(window.location.search);
             const petId = urlParams.get('id');

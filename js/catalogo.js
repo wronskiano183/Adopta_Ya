@@ -1,3 +1,4 @@
+
 // Arreglo de mascotas (ejemplo inicial)
 const mascotas = [
   {id: 1, nombre: "Luna", especie: "Perro", edad: 2, tamaño: "Mediano", descripcion: "Juguetona y cariñosa", foto: "img/mascotas/salchicha1.jpg"},
@@ -60,3 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("filtro-especie").addEventListener("change", aplicarFiltros);
   document.getElementById("filtro-tamano").addEventListener("change", aplicarFiltros);
 });
+
+
