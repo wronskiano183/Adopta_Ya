@@ -4,29 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max - Detalles | Adopta Ya</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Adopta Ya</title>
 </head>
 
 <body>
-
+    <!-- Header -->
     <header>
         <h1>🐾 Bienvenido a Adopta Ya 🐾</h1>
         <p>Tu mejor amigo te está esperando</p>
     </header>
 
-
+    <!-- Navegación simple -->
     <nav>
         <a href="index.html">Inicio</a>
-        <a href="postulaciones.html">Postulaciones</a>
-        <a href="postulacion.html">Nueva Postulación</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="postulacion.html">Postularme</a>
         <a href="contacto.html">Contacto</a>
     </nav>
-    <p>Pagina de detalles</p>
 
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="row">
+            <!-- Columna para foto estatica -->
+            <div class="col-md-6 mb-4">
+                <img id="staticPetImage" src="https://via.placeholder.com/400x300?text=Cargando..."
+                    class="img-fluid rounded-3 shadow-lg w-100 h-auto static-image" alt="Cargando mascota"
+                    style="object-fit: cover; max-height: 450px;">
+            </div>
+
+            <!-- Columna para los detalles -->
+            <div class="col-md-6">
+                <h1 class="pet-name mb-3">Cargando mascota...</h1>
+                <div class="d-flex mb-3">
+                    <span class="badge bg-secondary me-2">Cargando...</span>
+                    <span class="badge bg-secondary me-2">Cargando...</span>
+                    <span class="badge bg-secondary">Cargando...</span>
+                </div>
+
+                <h4>Descripción</h4>
+                <p class="mb-4carga">Cargando descripción de la mascota...</p>
+
+                <h4>Requisitos de Adopción</h4>
+                <ul class="list-unstyled">
+                    <li class="requirement-item">Espacio adecuado para la mascota</li>
+                    <li class="requirement-item">Compromiso de cuidado responsable</li>
+                    <li class="requirement-item">Presupuesto para alimentación y veterinario</li>
+                    <li class="requirement-item">Autorización de todos los miembros de la familia</li>
+                    <li class="requirement-item">Contrato de adopción y seguimiento post-adopción</li>
+                </ul>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+                    <a href="#" class="btn btn-adopt" id="btnPostularme">
+                        <i class="bi bi-heart-fill me-2"></i>Postularme para Adopción
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Adopta Ya - Todos los derechos reservados</p>
+        <div class="container">
+            <p>©2025 Adopta Ya - Todos los derechos reservados</p>
+            <p>
+                <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+            </p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript simple para la página -->
+    <script src="js/detalle.js"></script>
 </body>
 
 </html>

@@ -59,3 +59,146 @@ footer {
     padding: 15px 0;
     margin-top: 30px;
 }
+/* ESTILOS ESPECÍFICOS PARA DETALLE.HTML */
+        
+        /* Carrusel */
+        .carousel-container {
+            height: 400px;
+            background-color: #e9f5e9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .carousel-image {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            background-color: #e9f5e9;
+        }
+
+        /* Detalles de mascota */
+        .pet-name {
+            color: #4caf50;
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 10px;
+        }
+        
+        .requirement-item {
+            margin-bottom: 12px;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .requirement-item:before {
+            content: "🐾";
+            position: absolute;
+            left: 0;
+        }
+        
+        .btn-adopt {
+            background: #ff9800;
+            color: white;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-adopt:hover {
+            background: #f57c00;
+            transform: scale(1.05);
+        }
+
+        /* ESTILOS ESPECÍFICOS PARA CONTACTO.HTML */
+        
+        /* Formulario de contacto */
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .form-title {
+            color: #4caf50;
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #4caf50;
+        }
+
+        .form-control {
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 12px;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #4caf50;
+            box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+        }
+
+        .btn-contact {
+            background: #ff9800;
+            color: white;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: none;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        @media (min-width: 576px) {
+            .btn-contact {
+                width: auto;
+            }
+        }
+        
+        .btn-contact:hover {
+            background: #f57c00;
+            transform: scale(1.02);
+        }
+
+        /* Información de contacto */
+        .contact-info {
+            background-color: #e9f5e9;
+            padding: 25px;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            background-color: #4caf50;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .carousel-container, .carousel-image {
+                height: 300px;
+            }
+            
+            .contact-info {
+                margin-top: 30px;
+            }
+        }

@@ -4,29 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Adopta Ya</title>
+    <title>Adopta Ya - Postulaciones</title>
 </head>
 
-<body>
+<body class="bg-light"> <!-- se agrega la clase bg-light para un fondo claro -->
 
-    <header>
+    <header class="text-center p-3 bg-dark text-white">
         <h1>🐾 Bienvenido a Adopta Ya 🐾</h1>
         <p>Tu mejor amigo te está esperando</p>
     </header>
 
-
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="postulaciones.html">Postulaciones</a>
-        <a href="postulacion.html">Nueva Postulación</a>
+    <nav class="text-center mb-3">
+        <a href="index.html">Inicio</a> |
+        <a href="postulaciones.html">Postulaciones</a> |
+        <a href="postulacion.html">Nueva Postulación</a> |
         <a href="contacto.html">Contacto</a>
     </nav>
-    <P>Pagina de postulaciones</P>
 
-    <footer>
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Postulaciones Recibidas</h2>
+
+        <!-- se crea la tabla -->
+        <table class="table table-bordered table-hover shadow">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Adoptante</th>
+                    <th>Email</th>
+                    <th>Mascota</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-postulaciones"></tbody>
+        </table>
+
+        <!-- boton para exportaer -->
+        <div class="text-center mb-4">
+            <button onclick="exportarTXT()" class="btn btn-warning">Exportar a TXT</button>
+        </div>
+
+        <!-- contador para las adopciones -->
+        <div class="mt-4">
+            <h4>Adopciones aprobadas por especie:</h4>
+            <ul id="contador"></ul>
+        </div>
+    </div>
+
+    <footer class="text-center p-3 bg-dark text-white mt-4">
         <p>&copy; 2025 Adopta Ya - Todos los derechos reservados</p>
     </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/postulaciones.js"></script>
 </body>
 
 </html>

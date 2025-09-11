@@ -4,29 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta Ya - Nueva Postulación</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Adopta Ya</title>
 </head>
 
-<body>
+<body class="bg-light">
 
     <header>
         <h1>🐾 Bienvenido a Adopta Ya 🐾</h1>
         <p>Tu mejor amigo te está esperando</p>
     </header>
-
-
     <nav>
         <a href="index.html">Inicio</a>
         <a href="postulaciones.html">Postulaciones</a>
         <a href="postulacion.html">Nueva Postulación</a>
         <a href="contacto.html">Contacto</a>
     </nav>
+    <!-- Formulario -->
+    <div class="container mt-4">
+        <div class="card shadow p-4">
+            <h2 class="text-center mb-4">Formulario de Adopción</h2>
 
-    <p>Página de nueva postulación</p>
-    <footer>
+            <form id="formPostulacion">
+                <!-- Nombre -->
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre completo</label>
+                    <input type="text" id="nombre" class="form-control" required>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+
+                <!-- Mascota -->
+                <div class="mb-3">
+                    <label for="mascota" class="form-label">Mascota seleccionada</label>
+                    <select id="mascota" class="form-select" required></select>
+                </div>
+
+                <!-- Experiencia -->
+                <div class="mb-3">
+                    <label for="experiencia" class="form-label">Experiencia con mascotas</label>
+                    <textarea id="experiencia" class="form-control" rows="3" required></textarea>
+                </div>
+
+                <!-- Evidencia -->
+                <div class="mb-3">
+                    <label for="evidencia" class="form-label">Evidencia de domicilio (URL opcional)</label>
+                    <input type="url" id="evidencia" class="form-control">
+                </div>
+
+                <!-- Botón -->
+                <button type="submit" class="btn btn-success w-100">Enviar Postulación</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center p-3 bg-dark text-white mt-4">
         <p>&copy; 2025 Adopta Ya - Todos los derechos reservados</p>
     </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/postulacion.js"></script>
 </body>
 
 </html>
