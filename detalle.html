@@ -1,32 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max - Detalles | Adopta Ya</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Adopta Ya</title>
 </head>
-
 <body>
-
+    <!-- Header -->
     <header>
         <h1>🐾 Bienvenido a Adopta Ya 🐾</h1>
         <p>Tu mejor amigo te está esperando</p>
     </header>
 
-
+    <!-- Navegación simple -->
     <nav>
         <a href="index.html">Inicio</a>
-        <a href="postulaciones.html">Postulaciones</a>
-        <a href="postulacion.html">Nueva Postulación</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="postulacion.html">Postularme</a>
         <a href="contacto.html">Contacto</a>
     </nav>
-    <p>Pagina de detalles</p>
 
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="row">
+            <!-- Columna para el carrusel -->
+            <div class="col-md-6 mb-4">
+                <div class="carousel-container">
+                    <div id="petCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                        <div class="carousel-inner h-100">
+                            <div class="carousel-item active h-100">
+                                <img src="img/mascotas/chichuahuaWhite1.jpg" class="carousel-image" alt="Foto de Max">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="img/mascotas/chichuahuaWhite2.jpg" class="carousel-image" alt="Max jugando">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="img/mascotas/chichuahuaWhite3.jpg" class="carousel-image" alt="Max descansando">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#petCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna para los detalles -->
+            <div class="col-md-6">
+                <h1 class="pet-name mb-3">Max</h1>
+                <div class="d-flex mb-3">
+                    <span class="badge bg-success me-2">Perro</span>
+                    <span class="badge bg-info me-2">2 años</span>
+                    <span class="badge bg-warning text-dark">Mediano</span>
+                </div>
+                
+                <h4>Descripción</h4>
+                <p class="mb-4">Max es un perro mestizo de 2 años, muy juguetón y cariñoso. Fue rescatado de la calle y desde entonces ha estado en busca de un hogar amoroso. Le encanta salir a pasear y jugar con pelotas. Se lleva bien con otros perros y niños. Está esterilizado y con todas sus vacunas al día.</p>
+                
+                <h4>Requisitos de Adopción</h4>
+                <ul class="list-unstyled">
+                    <li class="requirement-item">Espacio amplio donde pueda correr y jugar</li>
+                    <li class="requirement-item">Experiencia previa con perros</li>
+                    <li class="requirement-item">Compromiso de paseos diarios</li>
+                    <li class="requirement-item">Presupuesto para alimentación y veterinario</li>
+                    <li class="requirement-item">Autorización de todos los miembros de la familia</li>
+                    <li class="requirement-item">Contrato de adopción y seguimiento post-adopción</li>
+                </ul>
+                
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+                    <a href="postulacion.html?petId=3" class="btn btn-adopt">
+                        <i class="bi bi-heart-fill me-2"></i>Postularme para Adopción
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Adopta Ya - Todos los derechos reservados</p>
+        <div class="container">
+            <p>©2025 Adopta Ya - Todos los derechos reservados</p>
+            <p>
+                <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+            </p>
+        </div>
     </footer>
-</body>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript simple para la página -->
+    <script src="js/detalle.js"></script>
+</body>
 </html>
