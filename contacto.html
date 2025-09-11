@@ -1,32 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Adopta Ya</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Adopta Ya</title>
 </head>
-
 <body>
-
     <header>
         <h1>🐾 Bienvenido a Adopta Ya 🐾</h1>
         <p>Tu mejor amigo te está esperando</p>
     </header>
-
-
     <nav>
         <a href="index.html">Inicio</a>
-        <a href="postulaciones.html">Postulaciones</a>
-        <a href="postulacion.html">Nueva Postulación</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="postulacion.html">Postularme</a>
         <a href="contacto.html">Contacto</a>
     </nav>
 
-    <p>Pagina contacto</p>
-    <footer>
-        <p>&copy; 2025 Adopta Ya - Todos los derechos reservados</p>
-    </footer>
-</body>
+    <!-- Contenido principal -->
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: #4caf50;">Contáctanos</h2>
+        <p class="text-center mb-5">¿Tienes preguntas sobre el proceso de adopción? ¿Quieres reportar un animal que necesita ayuda? ¡Estamos aquí para ayudarte!</p>
+        
+        <div class="row">
+            <!-- Formulario de contacto -->
+            <div class="col-md-7 mb-4">
+                <div class="contact-form">
+                    <h3 class="form-title">Envía un mensaje</h3>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">Por favor ingresa un correo electrónico válido.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                            <div class="invalid-feedback">Por favor ingresa tu mensaje.</div>
+                        </div>
+                        <button type="submit" class="btn btn-contact"> Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Información de contacto -->
+            <div class="col-md-5">
+                <div class="contact-info">
+                    <h3 class="form-title">Información de contacto</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Dirección</h5>
+                            <p>Calle Real #123, Col. Mascotas Felices<br> Puebla, Puebla</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Teléfono</h5>
+                            <p>(22) 1234-5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Email</h5>
+                            <p>contacto@adoptaya.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Horario de atención</h5>
+                            <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2023 Adopta Ya - Todos los derechos reservados</p>
+            <p>
+                <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript para validación del formulario -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Validar campos
+                let isValid = true;
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+                
+                // Validar nombre
+                if (nameInput.value.trim() === '') {
+                    nameInput.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    nameInput.classList.remove('is-invalid');
+                }
+                
+                // Validar email
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.value)) {
+                    emailInput.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    emailInput.classList.remove('is-invalid');
+                }
+                
+                // Validar mensaje
+                if (messageInput.value.trim() === '') {
+                    messageInput.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    messageInput.classList.remove('is-invalid');
+                }
+                
+                // Si es válido, mostrar alerta de éxito
+                if (isValid) {
+                    alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
+                    contactForm.reset();
+                }
+            });
+        });
+    </script>
+</body>
 </html>
