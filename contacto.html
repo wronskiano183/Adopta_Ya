@@ -180,6 +180,17 @@
                     messageInput.classList.remove('is-invalid');
                 }
 
+                // Validaciones 
+                if (!nameInput.value || !emailInput.value || !messageInput.value) {
+                    alert("Por favor completa todos los campos obligatorios.");
+                    return;
+                }
+                // Validar que el nombre no contenga números
+                if (/\d/.test(nameInput.value)) {
+                    alert("El nombre no puede contener números.");
+                    return;
+                }
+
                 // Si es válido, mostrar alerta de éxito
                 if (isValid) {
                     alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');

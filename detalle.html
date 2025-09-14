@@ -50,12 +50,33 @@
     <!-- Contenido principal -->
     <div class="container">
         <div class="row">
-            <!-- Columna para foto estatica -->
+            <!-- Columna para carrusel -->
             <div class="col-md-6 mb-4">
-                <img id="staticPetImage" src="https://via.placeholder.com/400x300?text=Cargando..."
-                    class="img-fluid rounded-3 shadow-lg w-100 h-auto static-image" alt="Cargando mascota"
-                    style="object-fit: cover; max-height: 450px;">
+                <div id="petCarousel" class="carousel slide shadow-lg rounded-3" data-bs-ride="carousel">
+
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators" id="carouselIndicators">
+                        <!-- Aquí se insertan los botones con JS -->
+                    </div>
+
+                    <!-- Imágenes -->
+                    <div class="carousel-inner" id="carouselImages">
+                        <!-- Aquí se insertan las imágenes con JS -->
+                    </div>
+
+                    <!-- Controles -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#petCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
             </div>
+
+
 
             <!-- Columna para los detalles -->
             <div class="col-md-6">

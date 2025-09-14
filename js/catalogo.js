@@ -1,15 +1,15 @@
 
 // Arreglo de mascotas (ejemplo inicial)
 const mascotas = [
-  {id: 1, nombre: "Luna", especie: "Perro", edad: 2, tamaño: "Mediano", descripcion: "Juguetona y cariñosa", foto: "img/mascotas/salchicha1.jpg"},
-  {id: 2, nombre: "Michi", especie: "Gato", edad: 1, tamaño: "Pequeño", descripcion: "Tranquilo y limpio", foto: "img/mascotas/naranja.jpg"},
-  {id: 3, nombre: "Max", especie: "Perro", edad: 4, tamaño: "Grande", descripcion: "Fiel y protector", foto: "img/mascotas/chichuahuaWhite1.jpg"},
-  {id: 4, nombre: "Kiwi", especie: "Gato", edad: 3, tamaño: "Pequeño", descripcion: "Muy alegre y canta mucho", foto: "img/mascotas/gatokiwi.jpg"},
-  {id: 5, nombre: "zapato", especie: "Gato", edad: 3, tamaño: "Pequeño", descripcion: "Muy alegre y canta mucho", foto: "img/mascotas/gatokiwi.jpg"},
-  {id: 6, nombre: "Sol", especie: "Gato", edad: 1, tamaño: "Grande", descripcion: "Ronronea suavemente", foto: "img/mascotas/naranja.jpg"}
+  {id: 1, nombre: "Luna", especie: "Perro", edad: 2, tamaño: "Mediano", descripcion: "Juguetona y cariñosa", foto: "img/mascotas/salchicha1.jpg",fotos:["img/mascotas/salchicha1.jpg","img/mascotas/salchicha2.jpg","img/mascotas/salchicha3.jpg"]},
+  {id: 2, nombre: "Michi", especie: "Gato", edad: 1, tamaño: "Pequeño", descripcion: "Tranquilo y limpio", foto: "img/mascotas/naranja1.jpg",fotos:["img/mascotas/naranja1.jpg","img/mascotas/naranja2.jpg","img/mascotas/naranja3.jpg"]},
+  {id: 3, nombre: "Max", especie: "Perro", edad: 4, tamaño: "Grande", descripcion: "Fiel y protector", foto: "img/mascotas/chichuahuaWhite1.jpg",fotos:["img/mascotas/chichuahuaWhite1.jpg","img/mascotas/chichuahuaWhite2.jpg","img/mascotas/chichuahuaWhite3.jpg"]},
+  {id: 4, nombre: "Kiwi", especie: "Gato", edad: 3, tamaño: "Pequeño", descripcion: "Muy alegre y canta mucho", foto: "img/mascotas/kiwi1.jpg",fotos:["img/mascotas/kiwi1.jpg","img/mascotas/kiwi2.jpg","img/mascotas/kiwi3.jpg"]},
+  {id: 5, nombre: "zapato", especie: "Gato", edad: 3, tamaño: "Pequeño", descripcion: "Muy alegre y canta mucho", foto: "img/mascotas/gris1.jpg",fotos:["img/mascotas/gris1.jpg","img/mascotas/gris2.jpg","img/mascotas/gris3.jpg"]},
 ];
 
-// Guardar mascotas en localStorage 
+
+// Guardar mascotas en localStorage
 if (!localStorage.getItem("pets")) {
   localStorage.setItem("pets", JSON.stringify(mascotas));
 }

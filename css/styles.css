@@ -133,6 +133,21 @@ footer {
             background-color: #e9f5e9;
         }
 
+        /* Contenedor del carrusel: fondo verde y tamaño fijo */
+        #petCarousel {
+            background-color: #d4f0d4; /* verde claro */
+            max-height: 450px;         /* alto fijo */
+            overflow: hidden;          /* evita que se salga de los bordes */
+            border-radius: 0.75rem;    /* mismo radio que las imágenes */
+        }
+
+        /* Imágenes dentro del carrusel: ocupar todo el contenedor sin deformarse */
+        #petCarousel .carousel-item img {
+            width: 100%;
+            height: 450px;        /* mismo alto que el contenedor */
+            object-fit: cover;    /* recorta manteniendo proporción */
+        }
+
         /* Detalles de mascota */
         .pet-name {
             color: #4caf50;
